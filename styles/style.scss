@@ -1,0 +1,40 @@
+$whiteColor: #FFF;
+$blackColor:#000;
+$orangeColor: #EE3D1B;
+$roseColor: #D52047;
+
+header {
+    background-image: url('../image/header_bg.jpg');
+    background-size: cover;
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box-first-top{
+    background-image: url('../image/01.png');
+    background-repeat: no-repeat;
+}
+
+.box-second-top{
+    background-image: url('../image/02.png');
+    background-repeat: no-repeat;
+}
+
+.box-third-top{
+    background-image: url('../image/03.png');
+    background-repeat: no-repeat;
+}
+
+.box-fourth-top{
+    background-image: url('../image/04.png');
+    background-repeat: no-repeat;
+}
+
+
+.LP-app-download{
+    background-color: $roseColor;
+}
