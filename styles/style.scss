@@ -2,39 +2,102 @@ $whiteColor: #FFF;
 $blackColor:#000;
 $orangeColor: #EE3D1B;
 $roseColor: #D52047;
+$primaryFont: Lato, Helvetica, sans-serif;
+
+h2{
+    text-align: center;
+}
 
 header {
     background-image: url('../image/header_bg.jpg');
     background-size: cover;
-    width:100%;
+    width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: $primaryFont;
+
+    button{
+        background-color: $whiteColor;
+        color:$roseColor;
+    }
+}
+
+.LP-header-nav {
+    display: block;
+    background-color: transparent;
+    overflow: hidden;
+    a {
+        float: left;
+        color: $whiteColor;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
 }
 
 
-.box-first-top{
+    .LP-header-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $whiteColor;
+    }
+
+    .LP-card{
+        display: flex;
+        position: relative;
+    }
+    .LP-card-content-first, .LP-card-content-second, .LP-card-content-third{
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: $whiteColor;
+        top: 170px;
+        right: 80px;
+    }
+
+    .LP-features-boxes{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+    }
+
+    .LP-features{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+
+.box-first-top {
     background-image: url('../image/01.png');
     background-repeat: no-repeat;
 }
 
-.box-second-top{
+.box-second-top {
     background-image: url('../image/02.png');
     background-repeat: no-repeat;
 }
 
-.box-third-top{
+.box-third-top {
     background-image: url('../image/03.png');
     background-repeat: no-repeat;
 }
 
-.box-fourth-top{
+.box-fourth-top {
     background-image: url('../image/04.png');
     background-repeat: no-repeat;
 }
 
 
-.LP-app-download{
+.LP-app-download {
     background-color: $roseColor;
 }
