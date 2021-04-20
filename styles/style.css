@@ -1,10 +1,22 @@
+h1 {
+  font-family: Lato, Helvetica, sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  margin-top: 177px;
+}
+
 h2 {
+  font-size: 36px;
+  margin-top: 63px;
+  margin-bottom: 63px;
   text-align: center;
 }
 
 header {
   background-image: url("../image/header_bg.jpg");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -24,23 +36,64 @@ header {
 }
 
 header button {
-  background-color: #FFF;
-  color: #D52047;
+  background-color: white;
+  text-decoration: none;
+  cursor: pointer;
+  color: #d52047;
+  font-size: 14px;
+  padding: 17px 53px;
+  border: 0;
+  border-radius: 6px;
+  margin: 39px 0 187px;
+}
+
+.LP-container {
+  width: 1120px;
+  margin: 0 auto;
 }
 
 .LP-header-nav {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: transparent;
+  width: 1440px;
+  max-width: 100%;
   overflow: hidden;
+}
+
+.LP-header-nav .LP-logo {
+  font-size: 18px;
+}
+
+.LP-header-nav .LP-logo img {
+  margin-right: 10px;
 }
 
 .LP-header-nav a {
   float: left;
-  color: #FFF;
+  color: white;
   text-align: center;
-  padding: 14px 16px;
+  margin-top: 58px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.LP-header-nav a:not(:last-child) {
+  padding-right: 22px;
+}
+
+.LP-header-nav a:not(.LP-logo):hover {
+  font-weight: 700;
 }
 
 .LP-header-text {
@@ -57,7 +110,16 @@ header button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #FFF;
+  color: white;
+}
+
+.LP-header-text p {
+  line-height: 36px;
+  width: 540px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .LP-card {
@@ -67,14 +129,43 @@ header button {
   position: relative;
 }
 
+.LP-card:not(:last-child) {
+  margin-right: 30px;
+}
+
 .LP-card-content-first, .LP-card-content-second, .LP-card-content-third {
   display: block;
   position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: #FFF;
-  top: 170px;
-  right: 80px;
+  width: 293px;
+  height: 198px;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  top: 158px;
+  right: 25px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.LP-card-content-first p:not(.LP-card-h), .LP-card-content-second p:not(.LP-card-h), .LP-card-content-third p:not(.LP-card-h) {
+  font-weight: 400;
+  margin: 33px 41px 5px 41px;
+}
+
+.LP-card-content-first a, .LP-card-content-second a, .LP-card-content-third a {
+  margin: 0 20px 25px 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ed4c5c;
+}
+
+.LP-card-h {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 20px 33px 20px 35px;
+  text-align: center;
 }
 
 .LP-features-boxes {
@@ -92,19 +183,22 @@ header button {
           flex-direction: row;
 }
 
-.LP-features {
+.LP-tech-boxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.LP-features {
+  margin-bottom: 230px;
+}
+
+.LP-features-bg-color {
+  background-color: #fafafa;
 }
 
 .box-first-top {
@@ -128,6 +222,12 @@ header button {
 }
 
 .LP-app-download {
-  background-color: #D52047;
+  background-color: #d52047;
+}
+
+@media (min-width: 1440px) {
+  header {
+    background-size: cover;
+  }
 }
 /*# sourceMappingURL=style.css.map */

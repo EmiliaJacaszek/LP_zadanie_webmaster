@@ -9,15 +9,16 @@
 </head>
 <body>
 
-    <header class="LP-container">
+    <header>
+        <div class="LP-container">
         <div class="LP-header-nav">
             <a href="#" class="LP-logo"><img src="image/vector.png">CLOUDBUDGET</a>
             <div class="LP-header-right">
               <a href="#">OVERVIEW</a>
               <a href="#LP-features">FEATURES</a>
               <a href="#LP-technology">TECHNOLOGY</a>
-              <a href="#">CONTACT</a>
-              <a href="#">Sign up</a>
+              <a href="#LP-contact">CONTACT</a>
+              <a href="#">SIGN UP</a>
             </div>
           </div>
 
@@ -28,16 +29,19 @@
              Up to €4.99</p>
             <button>SIGN UP</button>
         </div>
+    </div>
     </header>
 
-    <main class="LP-container">
+    <main>
+        <div class="LP-features-bg-color">
+        <div class="LP-container">
     <section class="LP-features" id="LP-features">
         <h2>FEATURES</h2>
         <div class="LP-features-boxes">
         <div class="LP-card">
             <img src="image/box1.jpg" class="LP-card-img-first">
             <div class="LP-card-content-first">
-                <p>
+                <p class="LP-card-h">
                     Supports All Currencies and Cards
                 </p>
                 <p>
@@ -50,7 +54,7 @@
         <div class="LP-card">
             <img src="image/box2.jpg" class="LP-card-img-second">
             <div class="LP-card-content-second">
-                <p>
+                <p class="LP-card-h">
                     Manage your expenses on the go
                 </p>
                 <p>
@@ -62,7 +66,7 @@
         <div class="LP-card">
             <img src="image/box3.jpg" class="LP-card-img-third">
             <div class="LP-card-content-third">
-                <p>
+                <p class="LP-card-h">
                     Cloud Budget Management Software
                 </p>
                 <p>
@@ -73,10 +77,13 @@
         </div>
     </div>
     </section>
+</div>
+</div>
 
+<div class="LP-container">
     <section class="LP-technology" id="LP-technology">
         <h2>TECHNOLOGY</h2>
-
+        <div class="LP-tech-boxes">
         <div class="LP-tech">
             <div class="box-first-top">
                 <img src="image/cloud-icon.png">
@@ -109,8 +116,9 @@
 
             </div>
         </div>
-
+</div>
     </section>
+</div>
 
     <section class="LP-app-download">
         <div class="text-content">
@@ -133,7 +141,7 @@
         </div>
     </section>
 
-    <section class="LP-contact">
+    <section class="LP-contact" id="LP-contact">
         <div class="text-left">
             <h3>Contact</h3>
             <p>Questions or concerns? Just fill out the form below and our support<br> team will get back to you within 24 hours</p>
@@ -154,10 +162,8 @@
           </form>
 
     </section>
+
 </main>
-
-
-
 
 </body>
 </html>
