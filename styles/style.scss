@@ -2,14 +2,13 @@ $whiteColor: rgb(255, 255, 255);
 $blackColor:rgb(0, 0, 0);
 $orangeColor: rgb(238, 61, 27);
 $roseColor: rgb(213, 32, 71);
-$primaryFont: Lato, Helvetica, sans-serif;
+$LightRoseColor: rgb(237, 76, 92);
+$primaryFont: 'Lato', sans-serif;
 
 h1{
     font-family: $primaryFont;
     font-size: 72px;
     font-weight: 700;
-    margin-top: 177px;
-
 }
 h2{
     font-size: 36px;
@@ -22,6 +21,13 @@ h3{
     font-size: 18px;
     font-weight: 700;
     text-align: center;
+}
+
+h4{
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 600;
+
 }
 
 header {
@@ -48,45 +54,140 @@ header {
         border-radius: 6px;
         margin: 39px 0 187px;
     }
+
+    button:focus, button:active{
+        outline: none;
+    }
+    button:hover{
+        background: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+    }
 }
+
+
 .LP-container{
     width: 1120px;
     margin: 0 auto;
 }
-.LP-header-nav {
+
+
+
+a {
+    color: $whiteColor;
+  }
+  
+  /* header */
+  
+  .LP-header-nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    background-color: transparent;
-    width: 1440px;
-    max-width: 100%;
+    align-items: center;
+    padding-top: 46px;
+
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     overflow: hidden;
-    .LP-logo{
-        font-size: 18px;
 
-        img{
-            margin-right: 10px;
-        }
+    li:hover{
+    font-weight: 700;
     }
-    a {
-        float: left;
-        color: $whiteColor;
-        text-align: center;
-        margin-top: 58px;
+
+    li a {
+        display: block;
+        padding: 20px 20px;
         text-decoration: none;
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
-
-    a:not(:last-child) {
-        padding-right: 22px;
-    }
-
-    a:not(.LP-logo):hover{
-        font-weight: 700;
     }
 }
+
+  .logo {
+    display: block;
+    float: left;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  /* menu */
+  
+  .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .menu-icon {
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    z-index: 10000;
+  }
+  
+  .menu-icon .navicon {
+    background: $whiteColor;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .menu-icon .navicon:before,
+  .menu-icon .navicon:after {
+    background: $whiteColor;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .menu-btn {
+    display: none;
+  }
+  
+  .menu-btn:checked ~ .menu {
+    max-height: 300px;
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+}
+
+
 
     .LP-header-text {
         display: flex;
@@ -94,6 +195,7 @@ header {
         justify-content: center;
         align-items: center;
         color: $whiteColor;
+        margin-top: 177px;
 
         p{
             line-height: 36px;
@@ -143,7 +245,7 @@ header {
             margin: 0 20px 25px 20px;
             font-weight: 700;
             text-decoration: none;
-            color:rgb(237, 76, 92);
+            color: $LightRoseColor;
         }
     }
 
@@ -161,6 +263,8 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        margin-bottom: 108px;
+        margin-top: 52px;
     }
 
     .LP-tech{
@@ -174,16 +278,16 @@ header {
 
     .box-first-icon, .box-second-icon, .box-third-icon, .box-fourth-icon {
         position: absolute;
-        top: 30px;
+        top: 36px;
     }
-    
+
     .LP-features{
         padding-bottom: 230px;
-       
     }
 
     .box-first-content{
         text-align: center;
+        padding-top: 16px;
     }
 
     .LP-features-bg-color{
@@ -192,7 +296,7 @@ header {
 
 
 .LP-app-download {
-    background-color: $roseColor;
+    background-color: $LightRoseColor;
 }
 
 .LP-app-download-wrapper{
@@ -204,16 +308,254 @@ header {
         flex-direction: column;
         justify-content: center;
         color: $whiteColor;
+        align-self: center;
+        width: 450px;
+
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            padding-bottom: 42px;
+            text-align: justify;
+        }
+
+        .icon-container img{
+            margin-right: 28px;
+        }
     }
 
     .slider-content{
         margin: 95px 0;
     }
-    
 }
+
+    .LP-contact{
+        margin-top: 117px;
+        margin-bottom: 78px;
+        .LP-contact-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .text-left{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                text-align: justify;
+
+                h4{
+                    margin-top: 0;
+                }
+            }
+            .form-right{
+                width: 540px;
+                font-size: 16px;
+                font-weight: 400;
+
+                #fname, #lname{
+                    width: 255px;
+                    height: 60px;
+                    padding: 0 31px;
+                    margin-bottom: 24px;
+                    color: rgba(19, 39, 67, 0.5);
+                }
+                #fname:active, #fname:hover, #fname:focus, #lname:active, #lname:hover, #lname:focus, #phone:active, #phone:hover, #phone:focus, #select-service:active, #select-service:hover, #select-service:focus{
+                    outline:0px;
+                }
+                #fname{
+                    margin-right: 25px;
+                }
+                #phone, #select-service{
+                    width: 540px;
+                    height: 60px;
+                    padding: 0 31px;
+                    margin-bottom: 24px;
+                    color: rgba(19, 39, 67, 0.5);
+                }
+                select{
+                    appearance: none;
+                    color: rgba(19, 39, 67, 0.5);
+                    background-image: url('../image/chevronDown-icon.png');
+                    background-repeat: no-repeat;
+                    font-size: 14px;
+                    background-position-x: 500px;
+                    background-position-y: 50%;
+                }
+
+                input, select{
+                    border: 1px solid rgb(51, 51, 51);
+                    box-sizing: border-box;
+                    border-radius: 6px;
+
+                    .option-text{
+                        color: $blackColor;
+                    }
+                    .option-text:hover, .option-text:focus{
+                        background-color: rgba(237, 76, 92, 0.5);
+                    }
+                }
+                .submit-btn{
+                    width: 160px;
+                    height: 50px;
+                    background: $LightRoseColor;
+                    border: 1.5px solid $LightRoseColor;
+                    box-sizing: border-box;
+                    border-radius: 6px;
+                    color: $whiteColor;
+                }
+                .submit-btn:focus, .submit-btn:active{
+                    outline: none;
+                }
+                .submit-btn:hover{
+                    background: rgba(237, 76, 92, 0.8);
+                    border: 1.5px solid rgba(237, 76, 92, 0.8);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 
 @media(min-width:1440px){
     header{
         background-size: cover;
     }
 }
+
+
+@media (min-width: 1200px) {
+    .LP-header-nav li {
+        float: left;
+      }
+      .LP-header-nav li a {
+        padding: 20px 30px;
+      }
+      .LP-header-nav .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+      .LP-header-nav .menu-icon {
+        display: none;
+      }
+  }
+
+@media(max-width:1200px){
+    header{
+        background-size: cover;
+    }
+
+    .LP-header-nav {
+        .menu-icon .navicon{
+            position: fixed;
+        }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    .menu-btn:checked ~ .menu {
+        max-height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        padding-top: 56px;
+      }
+    }
+    .LP-container {
+        width: 700px;
+    }
+
+    .LP-features{
+        padding-bottom: 150px;
+    }
+    .LP-features-boxes{
+        flex-direction: column;
+    }
+    .LP-card{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .LP-card:not(:last-child){
+        margin-right: 0;
+        margin-bottom: 180px;
+    }
+    .LP-card-content-first, .LP-card-content-second, .LP-card-content-third{
+        right: 205px;
+    }
+
+    .LP-tech{
+        margin: 0 10px;
+    }
+
+    .LP-app-download-wrapper .text-content p{
+        padding-bottom: 0;
+        padding-right: 50px;
+    }
+    .slider-content img{
+        width: 100%;
+    }
+
+    .LP-contact .LP-contact-content{
+        flex-direction: column;
+        align-items: center;
+
+        .text-left{
+
+            h4{
+                text-align: center;
+            }
+        }
+    }
+}
+
+  @media (max-width: 425px) {
+      h1{
+          font-size: 42px;
+      }
+    .LP-container{
+        width: 300px;
+    }
+    .LP-tech{
+        margin: 30px 10px;
+    }
+    .LP-tech-boxes{
+        flex-direction: column;
+    }
+    .LP-header-text {
+        margin-top: 50px;
+        p {
+            width: 300px;
+            font-size: 23px;
+            padding-top: 40px;
+        }
+    }
+    .LP-card-content-first, .LP-card-content-second, .LP-card-content-third{
+        right: 0;
+    }
+    .LP-app-download-wrapper{
+        flex-direction: column;
+        .text-content{
+            width: 300px;
+        }
+    }
+    .LP-contact{
+        .LP-contact-content{
+            .form-right{
+                width: 300px;
+                #phone, #select-service{
+                    width: 300px;
+                }
+                #fname, #lname{
+                    width: 300px;
+                }
+            }
+        }
+    }
+  }
