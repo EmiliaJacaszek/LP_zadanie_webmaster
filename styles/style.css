@@ -7,8 +7,15 @@ h1 {
 
 h2 {
   font-size: 36px;
-  margin-top: 63px;
+  padding-top: 63px;
+  margin-top: 0;
   margin-bottom: 63px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -122,6 +129,10 @@ header button {
   margin: 0 auto;
 }
 
+main {
+  font-family: Lato, Helvetica, sans-serif;
+}
+
 .LP-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,10 +173,7 @@ header button {
 }
 
 .LP-card-h {
-  font-size: 18px;
-  font-weight: 700;
   margin: 20px 33px 20px 35px;
-  text-align: center;
 }
 
 .LP-features-boxes {
@@ -191,38 +199,75 @@ header button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.LP-tech {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 30px;
+}
+
+.box-first-icon, .box-second-icon, .box-third-icon, .box-fourth-icon {
+  position: absolute;
+  top: 30px;
 }
 
 .LP-features {
-  margin-bottom: 230px;
+  padding-bottom: 230px;
+}
+
+.box-first-content {
+  text-align: center;
 }
 
 .LP-features-bg-color {
   background-color: #fafafa;
 }
 
-.box-first-top {
-  background-image: url("../image/01.png");
-  background-repeat: no-repeat;
-}
-
-.box-second-top {
-  background-image: url("../image/02.png");
-  background-repeat: no-repeat;
-}
-
-.box-third-top {
-  background-image: url("../image/03.png");
-  background-repeat: no-repeat;
-}
-
-.box-fourth-top {
-  background-image: url("../image/04.png");
-  background-repeat: no-repeat;
-}
-
 .LP-app-download {
   background-color: #d52047;
+}
+
+.LP-app-download-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.LP-app-download-wrapper .text-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.LP-app-download-wrapper .slider-content {
+  margin: 95px 0;
 }
 
 @media (min-width: 1440px) {
